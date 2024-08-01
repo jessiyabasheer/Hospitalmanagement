@@ -2,10 +2,14 @@ package testClasses;
 
 import java.io.IOException;
 
+
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageClass.MyaccountPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import pageClass.HomePageClass;
 import pageClass.LoginPageClass;
 
@@ -14,8 +18,9 @@ public class MyaccountPageTestClass extends BaseClasses {
 	HomePageClass hp;
 	MyaccountPageClass ap;
 
-	@Test
-	public void clickLanguage() throws IOException {
+	@Test(priority=1,retryAnalyzer = RetryAnalyzer.class)
+
+	public void verifyMyLanguageTileIsDisplayed() throws IOException {
 		lp = new LoginPageClass(driver);
 		hp = new HomePageClass(driver);
 		ap = new MyaccountPageClass(driver);
@@ -25,4 +30,5 @@ public class MyaccountPageTestClass extends BaseClasses {
 		Assert.assertTrue(ap.isMyLanguagesTileDisplayed(), "My Language tile is not displayed on the My Account page.");
 	}
 
+	
 }

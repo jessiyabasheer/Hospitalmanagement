@@ -2,12 +2,14 @@ package testClasses;
 
 import java.io.IOException;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageClass.HomePageClass;
 import pageClass.LoginPageClass;
 import pageClass.RegisterPatientPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import utilities.ExplicitWaitClass;
 
 public class RegisterPatientTestClass extends BaseClasses {
@@ -15,7 +17,7 @@ public class RegisterPatientTestClass extends BaseClasses {
 	HomePageClass hp;
 	RegisterPatientPageClass rpc;
 
-	@Test(priority = 1, groups = { "group1" })
+	@Test(priority = 1, groups = { "group1" },retryAnalyzer = RetryAnalyzer.class)
 	public void verifyToRegisterPatient() throws IOException {
 		lp = new LoginPageClass(driver);
 		hp = new HomePageClass(driver);

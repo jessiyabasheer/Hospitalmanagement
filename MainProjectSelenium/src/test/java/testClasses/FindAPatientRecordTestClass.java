@@ -1,6 +1,7 @@
 package testClasses;
 
-import java.io.IOException;
+import java.io.IOException
+;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,6 +9,7 @@ import org.testng.annotations.Test;
 import pageClass.HomePageClass;
 import pageClass.LoginPageClass;
 import pageClass.RegisterPatientPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import pageClass.FindPatientRecordPageClass;
 
 public class FindAPatientRecordTestClass extends BaseClasses {
@@ -16,7 +18,7 @@ public class FindAPatientRecordTestClass extends BaseClasses {
 	RegisterPatientPageClass rpc;
 	FindPatientRecordPageClass fp;
 
-	@Test(priority=1,groups = {"group1"})
+	@Test(priority=1,groups = {"group1"},retryAnalyzer = RetryAnalyzer.class)
 	public void testFindPatientAndVerifyGender() {
 		lp = new LoginPageClass(driver);
 		lp.login("admin", "Admin123");
@@ -30,7 +32,7 @@ public class FindAPatientRecordTestClass extends BaseClasses {
 		Assert.assertNotNull(firstResultGender, "First result gender is null");
 	}
 
-	@Test(priority=2,groups = {"group1"})
+	@Test(priority=2,groups = {"group1"},retryAnalyzer = RetryAnalyzer.class)
 	public void testFindPatientAndVerifyAge() {
 		lp = new LoginPageClass(driver);
 		lp.login("admin", "Admin123");

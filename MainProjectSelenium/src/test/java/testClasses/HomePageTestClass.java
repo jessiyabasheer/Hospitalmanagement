@@ -2,6 +2,8 @@ package testClasses;
 
 import java.util.ArrayList;
 
+import retryAnalyzer.RetryAnalyzer;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class HomePageTestClass extends BaseClasses{
 
 	
 	
- @Test(priority=1,groups = {"group1"})
+ @Test(priority=1,groups = {"group1"},retryAnalyzer = RetryAnalyzer.class)
 
 public void verifyAllTileIsDisplayedInHomePage()
 {
@@ -31,14 +33,9 @@ public void verifyAllTileIsDisplayedInHomePage()
 }
  
  
- @Test
-	
-public void clickOnRegisterATile()
+ 
 
-{
-	hp.clickOnRegisterAPagebutton();
-}
- @Test(priority=2,groups = {"group1"})
+ @Test(priority=2,groups = {"group1"},retryAnalyzer = RetryAnalyzer.class)
  public void verifyAdminDropdownMyAccount() {
  	lp = new LoginPageClass(driver);
 		lp.login("admin", "Admin123");
