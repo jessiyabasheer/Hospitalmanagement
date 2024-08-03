@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-01T18:43:48 IST" name="Suite" finished-at="2024-08-01T18:45:41 IST" duration-ms="112808">
+  <suite started-at="2024-08-03T11:19:00 IST" name="Suite" finished-at="2024-08-03T11:19:43 IST" duration-ms="42287">
     <groups>
       <group name="group1">
-        <method signature="RegisterPatientTestClass.verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@6c6cb480]" name="verifyToRegisterPatient" class="testClasses.RegisterPatientTestClass"/>
-        <method signature="RegisterPatientTestClass.verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@7a8c8dcf]" name="verifyToRegisterPatient" class="testClasses.RegisterPatientTestClass"/>
+        <method signature="RegisterPatientTestClass.verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@38af9828]" name="verifyToRegisterPatient" class="testClasses.RegisterPatientTestClass"/>
       </group> <!-- group1 -->
     </groups>
-    <test started-at="2024-08-01T18:43:48 IST" name="ChromeTest" finished-at="2024-08-01T18:45:01 IST" duration-ms="73592">
+    <test started-at="2024-08-03T11:19:00 IST" name="Test" finished-at="2024-08-03T11:19:43 IST" duration-ms="42287">
       <class name="testClasses.RegisterPatientTestClass">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.RegisterPatientTestClass@6c6cb480]" started-at="2024-08-01T18:43:48 IST" name="beforeMethod" finished-at="2024-08-01T18:44:02 IST" duration-ms="14057" status="PASS">
+        <test-method is-config="true" signature="createReport(org.testng.ITestContext)[pri:0, instance:testClasses.RegisterPatientTestClass@38af9828]" started-at="2024-08-03T11:19:00 IST" name="createReport" finished-at="2024-08-03T11:19:00 IST" duration-ms="199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2dfa02c1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createReport -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.RegisterPatientTestClass@38af9828]" started-at="2024-08-03T11:19:00 IST" name="beforeMethod" finished-at="2024-08-03T11:19:10 IST" duration-ms="9369" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,15 +32,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@6c6cb480]" started-at="2024-08-01T18:44:02 IST" name="verifyToRegisterPatient" finished-at="2024-08-01T18:44:48 IST" duration-ms="46074" status="PASS">
+        <test-method signature="verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@38af9828]" started-at="2024-08-03T11:19:10 IST" name="verifyToRegisterPatient" finished-at="2024-08-03T11:19:39 IST" duration-ms="28867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyToRegisterPatient -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.RegisterPatientTestClass@6c6cb480]" started-at="2024-08-01T18:44:48 IST" name="afterMethod" finished-at="2024-08-01T18:45:01 IST" duration-ms="13354" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.RegisterPatientTestClass@38af9828]" started-at="2024-08-03T11:19:39 IST" name="afterMethod" finished-at="2024-08-03T11:19:43 IST" duration-ms="3844" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyToRegisterPatient status=SUCCESS method=RegisterPatientTestClass.verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@6c6cb480] output={null}]]]>
+                <![CDATA[[TestResult name=verifyToRegisterPatient status=SUCCESS method=RegisterPatientTestClass.verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@38af9828] output={null}]]]>
               </value>
             </param>
           </params>
@@ -38,47 +48,6 @@
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testClasses.RegisterPatientTestClass -->
-    </test> <!-- ChromeTest -->
-    <test started-at="2024-08-01T18:45:02 IST" name="EdgeTest" finished-at="2024-08-01T18:45:41 IST" duration-ms="39050">
-      <class name="testClasses.RegisterPatientTestClass">
-        <test-method is-config="true" signature="createReport(org.testng.ITestContext)[pri:0, instance:testClasses.RegisterPatientTestClass@7a8c8dcf]" started-at="2024-08-01T18:43:47 IST" name="createReport" finished-at="2024-08-01T18:43:48 IST" duration-ms="978" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@1ff15a50]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createReport -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.RegisterPatientTestClass@7a8c8dcf]" started-at="2024-08-01T18:45:02 IST" name="beforeMethod" finished-at="2024-08-01T18:45:16 IST" duration-ms="14484" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@7a8c8dcf]" started-at="2024-08-01T18:45:16 IST" name="verifyToRegisterPatient" finished-at="2024-08-01T18:45:37 IST" duration-ms="20737" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyToRegisterPatient -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.RegisterPatientTestClass@7a8c8dcf]" started-at="2024-08-01T18:45:37 IST" name="afterMethod" finished-at="2024-08-01T18:45:41 IST" duration-ms="3794" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyToRegisterPatient status=SUCCESS method=RegisterPatientTestClass.verifyToRegisterPatient()[pri:1, instance:testClasses.RegisterPatientTestClass@7a8c8dcf] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- testClasses.RegisterPatientTestClass -->
-    </test> <!-- EdgeTest -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
