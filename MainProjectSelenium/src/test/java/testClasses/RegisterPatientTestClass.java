@@ -25,13 +25,16 @@ public class RegisterPatientTestClass extends BaseClasses {
 		lp.login(lp.readStringData(1, 0), lp.readStringData(1, 1));
 
 		hp.clickOnRegisterAPagebutton();
-		rpc.patientDemographicDetails("PatientGName", "PatientFName", "Male", "23", "April", "1972");
+		String givenName=rpc.readPatientGivenName();
+		String familyName=rpc.readPatientFamilyName();
+		
+		rpc.patientDemographicDetails(givenName, familyName, "Male", "23", "April", "1972");
 		rpc.patientContactInfo("Address1", "1234554321");
 		rpc.relationshipWithPatient("Parent", "TestParent");
 
 		String actual_registeredPatientName = rpc.registeredPatientName();
 
-		String expected_registeredPatientName = "PatientGName";
+		String expected_registeredPatientName = givenName;
 
 		Assert.assertEquals(actual_registeredPatientName, expected_registeredPatientName,
 				"Patient registration Failed");

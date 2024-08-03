@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.ExcelReadClass;
 import utilities.ExplicitWaitClass;
 import utilities.GeneralUtilities;
+import utilities.RandomDataUtilityClass;
 
 public class RegisterPatientPageClass {
 
@@ -29,7 +30,7 @@ public class RegisterPatientPageClass {
 	WebElement patientFamilyName;
 	@FindBy(name = "gender")
 	WebElement patientGender;
-	
+
 	@FindBy(name = "birthdateDay")
 	WebElement DayOfBirth;
 	@FindBy(name = "birthdateMonth")
@@ -45,7 +46,7 @@ public class RegisterPatientPageClass {
 	WebElement relationshipDp;
 	@FindBy(id = "next-button")
 	WebElement nextButton;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Person Name']")
 	WebElement relationPersonName;
 	@FindBy(id = "submit")
@@ -102,6 +103,14 @@ public class RegisterPatientPageClass {
 		ew.visibitlityOfWait(driver, registeredPatientGivenName);
 		return gl.getTextOfElement(registeredPatientGivenName);
 
+	}
+
+	public String readPatientGivenName() {
+		return RandomDataUtilityClass.getFirstName();
+	}
+
+	public String readPatientFamilyName() {
+		return RandomDataUtilityClass.getlastName();
 	}
 
 	public String readStringData(int row, int coloum) throws IOException {
