@@ -54,14 +54,32 @@ public class LoginPageClass {
 	@FindBy(xpath = "//ul[@id='sessionLocation']//child::li")
 	List<WebElement> allLocationSessions;
 
-	public void login(String username, String password) {
+	public LoginPageClass login(String username, String password) {
 		gl.typeOnElement(usernameTextBox, username);
 		gl.typeOnElement(passwordTextBox, password);
 		ew.elementTobeClickableWait(driver, registrationDeskOption);
 		gl.clikOnElement(registrationDeskOption);
 		gl.clikOnElement(loginButton);
+		return this;
 	}
-
+	public LoginPageClass enterUserName(String username) {
+		gl.typeOnElement(usernameTextBox, username);
+		return this;
+	}
+	public LoginPageClass enterPassword(String password) {
+		gl.typeOnElement(passwordTextBox, password);
+		return this;
+	}
+	public LoginPageClass clickOnRegistrationDesk() {
+		ew.elementTobeClickableWait(driver, registrationDeskOption);
+		gl.clikOnElement(registrationDeskOption);
+		return this;
+	}
+	public LoginPageClass clickOnLogin() {
+		ew.elementTobeClickableWait(driver, loginButton);
+		gl.clikOnElement(loginButton);
+		return this;
+	}
 	public void logout() {
 		ew.elementTobeClickableWait(driver, logoutButton);
 		gl.clikOnElement(logoutButton);

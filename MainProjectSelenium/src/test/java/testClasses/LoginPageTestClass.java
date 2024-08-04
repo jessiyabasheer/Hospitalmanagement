@@ -16,7 +16,9 @@ public class LoginPageTestClass extends BaseClasses {
 	@Test(priority=3,groups = {"group1"},retryAnalyzer = RetryAnalyzer.class)
 	public void verifySuccessfullLogin() throws IOException {
 		lp = new LoginPageClass(driver);
-		lp.login(lp.readStringData(1, 0), lp.readStringData(1, 1));
+		//lp.login(lp.readStringData(1, 0), lp.readStringData(1, 1));
+		lp.enterUserName(lp.readStringData(1, 0)).enterPassword(lp.readStringData(1, 1)).clickOnRegistrationDesk().clickOnLogin();
+		
 		hp = new HomePageClass(driver);
 		String actual_result = hp.getLoggedInUser();
 		Assert.assertEquals(actual_result, lp.readStringData(3, 0));
