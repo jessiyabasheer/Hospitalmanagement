@@ -25,22 +25,24 @@ public class BaseClasses {
 	ScreenShotInSelenium sh;
 	public static Properties property;
 
-	
-public static void readProperty() throws IOException {
-	property=new Properties();
-	//FileInputStream f=new FileInputStream("C:\\Users\\dell\\eclipse-workspace\\Sampleprojectselenium\\src\\test\\resources\\config.properties");
-	FileInputStream f=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
-	property.load(f);
-	
-}
-@BeforeSuite(alwaysRun = true)
-public void createReport(final ITestContext testContext) {
+	public static void readProperty() throws IOException {
+		property = new Properties();
+
+		FileInputStream f = new FileInputStream(
+				System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
+		property.load(f);
+
+	}
+
+	@BeforeSuite(alwaysRun = true)
+	public void createReport(final ITestContext testContext) {
 		extentReport.ExtentManager.createInstance().createTest(testContext.getName(), "message");
 	}
-@Parameters({ "browser" })
+
+	@Parameters({ "browser" })
 	@BeforeMethod(groups = { "launch" })
 	public void beforeMethod(String bValue) throws IOException {
-		
+
 		readProperty();
 
 		if (bValue.equalsIgnoreCase("chrome")) {
@@ -61,6 +63,4 @@ public void createReport(final ITestContext testContext) {
 		}
 		driver.quit();
 	}
-	}
-
-
+}
