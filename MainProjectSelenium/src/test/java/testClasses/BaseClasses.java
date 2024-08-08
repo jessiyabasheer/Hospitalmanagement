@@ -2,7 +2,7 @@ package testClasses;
 
 import org.testng.annotations.Test;
 
-import utilities.ScreenShotInSelenium;
+import utilities.ScreenShot;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -22,7 +22,7 @@ import org.testng.annotations.AfterMethod;
 
 public class BaseClasses {
 	public WebDriver driver;
-	ScreenShotInSelenium sh;
+	ScreenShot sh;
 	public static Properties property;
 
 	public static void readProperty() throws IOException {
@@ -58,7 +58,7 @@ public class BaseClasses {
 	@AfterMethod(groups = { "close" })
 	public void afterMethod(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			sh = new ScreenShotInSelenium();
+			sh = new ScreenShot();
 			sh.takeScreenshot(driver, result.getName());
 		}
 		driver.quit();

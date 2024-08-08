@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class ScreenShotInSelenium {
+public class ScreenShot {
 	
 	
 	//method to take screenshot and save it to a folder
